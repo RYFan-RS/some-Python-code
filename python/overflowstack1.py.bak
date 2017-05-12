@@ -1,0 +1,15 @@
+#_*_ coding:utf-8 _*_
+import re
+
+L = "hellohellohello"
+N = "good"
+N = "wherewhere"
+
+cnt = 0
+result = ''
+for i in range(1,len(L)+1):
+    if cnt <= len(re.findall(L[0:i],L)):
+        cnt = len(re.findall(L[0:i],L))
+        result = re.findall(L[0:i],L)[0]
+
+print(result)
